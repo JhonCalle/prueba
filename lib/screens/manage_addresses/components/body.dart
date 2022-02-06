@@ -69,8 +69,8 @@ class _BodyState extends State<Body> {
                   SizedBox(height: getProportionateScreenHeight(30)),
                   SizedBox(
                     height: SizeConfig.screenHeight * 0.7,
-                    child: StreamBuilder<List<String>>(
-                      stream: addressesStream.stream,
+                    child: StreamBuilder<dynamic>(
+                      stream: addressesStream!.stream,
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
                           final addresses = snapshot.data;

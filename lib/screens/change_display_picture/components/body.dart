@@ -151,7 +151,7 @@ class Body extends StatelessWidget {
     String snackbarMessage = 'Algo salió mal :(';
     try {
       final downloadUrl = await FirestoreFilesAccess().uploadFileToPath(
-          bodyState.chosenImage,
+          bodyState.chosenImage!,
           UserDatabaseHelper().getPathForCurrentUserDisplayPicture());
 
       uploadDisplayPictureStatus = await UserDatabaseHelper()

@@ -47,7 +47,7 @@ class ProductDetails extends ChangeNotifier {
   }
 
   ProductType get productType {
-    return _productType;
+    return _productType!;
   }
 
   set initialProductType(ProductType type) {

@@ -74,8 +74,8 @@ class _BodyState extends State<Body> {
   }
 
   Widget buildOrderedProductsList() {
-    return StreamBuilder<List<String>>(
-      stream: orderedProductsStream.stream,
+    return StreamBuilder<dynamic>(
+      stream: orderedProductsStream!.stream,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           final orderedProductsIds = snapshot.data;
@@ -219,7 +219,7 @@ class _BodyState extends State<Body> {
                   child: FlatButton(
                     onPressed: () async {
                       String currentUserUid =
-                          AuthentificationService().currentUser.uid;
+                          AuthentificationService().currentUser!.uid;
                       Review? prevReview;
                       try {
                         prevReview = await ProductDatabaseHelper()

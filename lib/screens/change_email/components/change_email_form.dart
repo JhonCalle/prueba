@@ -93,7 +93,7 @@ class _ChangeEmailFormState extends State<ChangeEmailForm> {
   }
 
   Widget buildCurrentEmailFormField() {
-    return StreamBuilder<User>(
+    return StreamBuilder<User?>(
       stream: AuthentificationService().userChanges,
       builder: (context, snapshot) {
         String? currentEmail;

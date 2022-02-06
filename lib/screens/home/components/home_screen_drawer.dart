@@ -29,7 +29,7 @@ class HomeScreenDrawer extends StatelessWidget {
       child: ListView(
         physics: BouncingScrollPhysics(),
         children: [
-          StreamBuilder<User>(
+          StreamBuilder<User?>(
               stream: AuthentificationService().userChanges,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
@@ -178,7 +178,7 @@ class HomeScreenDrawer extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return CircleAvatar(
-              backgroundImage: NetworkImage(snapshot.data),
+              backgroundImage: NetworkImage(snapshot.data.toString()),
             );
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(

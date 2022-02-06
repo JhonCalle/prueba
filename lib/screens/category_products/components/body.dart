@@ -68,7 +68,7 @@ class _BodyState extends State<Body> {
                   SizedBox(height: getProportionateScreenHeight(20)),
                   SizedBox(
                     height: SizeConfig.screenHeight * 0.68,
-                    child: StreamBuilder<List<String>>(
+                    child: StreamBuilder<dynamic>(
                       stream: categoryProductsStream.stream,
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {

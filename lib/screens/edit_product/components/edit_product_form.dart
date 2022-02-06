@@ -68,7 +68,7 @@ class _EditProductFormState extends State<EditProductForm> {
   void initState() {
     super.initState();
     if (widget.product == null) {
-      product = Product(null);
+      product = Product(null.toString());
       newProduct = true;
     } else {
       product = widget.product;
@@ -271,7 +271,7 @@ class _EditProductFormState extends State<EditProductForm> {
               fontSize: 16,
             ),
             onChanged: (value) {
-              productDetails.productType = value;
+              productDetails.productType = value.toString() as ProductType;
             },
             elevation: 0,
             underline: SizedBox(width: 0, height: 0),

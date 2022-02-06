@@ -33,7 +33,7 @@ class CartItemCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Image.asset(
-                      snapshot.data!.images[0],
+                      snapshot.data!.images![0],
                     ),
                   ),
                 ),
@@ -43,7 +43,7 @@ class CartItemCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    snapshot.data!.title,
+                    snapshot.data!.title!,
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black,

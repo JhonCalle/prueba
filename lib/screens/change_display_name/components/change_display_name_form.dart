@@ -88,7 +88,7 @@ class _ChangeDisplayNameFormState extends State<ChangeDisplayNameForm> {
   }
 
   Widget buildCurrentDisplayNameField() {
-    return StreamBuilder<User>(
+    return StreamBuilder<User?>(
       stream: AuthentificationService().userChanges,
       builder: (context, snapshot) {
         String? displayName;

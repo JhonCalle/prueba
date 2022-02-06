@@ -47,7 +47,7 @@ class ProductsSection extends StatelessWidget {
   }
 
   Widget buildProductsList() {
-    return StreamBuilder<List<String>>(
+    return StreamBuilder<dynamic>(
       stream: productsStreamController.stream,
       builder: (context, snapshot) {
         if (snapshot.hasData) {

@@ -81,8 +81,8 @@ class _BodyState extends State<Body> {
   }
 
   Widget buildCartItemsList() {
-    return StreamBuilder<List<String>>(
-      stream: cartItemsStream.stream,
+    return StreamBuilder<dynamic>(
+      stream: cartItemsStream!.stream,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List<String>? cartItemsId = snapshot.data;
